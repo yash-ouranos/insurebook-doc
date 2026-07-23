@@ -1596,6 +1596,47 @@ export default function MobileAppAllPolicyPage() {
             SME Insurance policies are labeled as "Other Insurance" in the system to provide flexibility for various business insurance products. The key feature is the "Other Policy Type" field, allowing users to specify custom insurance types not covered by standard categories. SME Insurance uses the same filter options and search functionality as other policy categories.
           </Callout>
         </DocSection>
+
+        {/* 16. View Policy Details */}
+        <DocSection id="view-policy-details" title="16. View Policy Details">
+          <p>
+            When you tap on any policy card in the All Policy list, the <strong className="text-foreground">View Policy</strong> page opens. This page shows the full details of the insurance policy and provides comprehensive action buttons.
+          </p>
+
+          <FieldTable
+            caption="View Policy Action Buttons"
+            headers={['Button', 'Description']}
+            rows={[
+              [
+                'Edit Insurance',
+                'Modify the complete policy profile, including motor insurance specific details recently added.',
+              ],
+              [
+                'Delete Insurance',
+                'Remove the policy from the database.',
+              ],
+              [
+                'Add Claim Management',
+                'Initiate a new claim process directly linked to this specific policy.',
+              ],
+            ]}
+          />
+
+          <figure className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
+            <div className="flex justify-center px-4 pt-4">
+              <Image
+                src="/screenshots/view-policy-actions.jpg"
+                alt="View Policy page displaying full insurance details along with Edit, Delete, and Add Claim Management action buttons"
+                width={1080}
+                height={1920}
+                className="w-full rounded-lg border border-border"
+              />
+            </div>
+            <figcaption className="border-t border-border px-4 py-2.5 text-xs text-muted-foreground">
+              View Policy page with Edit, Delete, and Add Claim Management buttons
+            </figcaption>
+          </figure>
+        </DocSection>
       </div>
     </DocsShell>
   )

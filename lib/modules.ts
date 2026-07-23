@@ -442,13 +442,6 @@ export const modules: ModuleEntry[] = [
             ],
           },
           {
-            slug: 'renewal-policy',
-            name: 'Renewal Policy',
-            description:
-              'Manage upcoming policy renewals — view details, send WhatsApp reminders, and initiate renewal forms.',
-            documented: true,
-          },
-          {
             slug: 'all-customer',
             name: 'All Customer',
             description:
@@ -496,7 +489,7 @@ export const modules: ModuleEntry[] = [
                 name: 'Commission Report',
                 description:
                   'View your earned, received, and pending commission on mobile.',
-                documented: false,
+                documented: true,
               },
               {
                 slug: 'payment-outstanding',
