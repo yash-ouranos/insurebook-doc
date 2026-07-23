@@ -23,6 +23,9 @@ const toc = [
   { id: 'commission-card', label: '3. Commission Card Details' },
   { id: 'full-policy-details', label: '4. Full Policy Details & Actions' },
   { id: 'life-insurance', label: '5. Life Insurance' },
+  { id: 'health-insurance', label: '6. Health Insurance' },
+  { id: 'motor-insurance', label: '7. Motor Insurance' },
+  { id: 'wc-insurance', label: '8. WC Insurance' },
 ]
 
 export default function MobileAppCommissionReportPage() {
@@ -647,6 +650,140 @@ export default function MobileAppCommissionReportPage() {
                 <li><strong>Delete Policy:</strong> Opens a warning modal directly within the details view to confirm deletion.</li>
                 <li><strong>Add Claim Management:</strong> A specialized form for logging vehicle-related claims. Fields include Vehicle Number, Date of Accident, Claim Amount, Claim Type (e.g., Cashless), Bill Amount, Approved Amount, and Status (e.g., Under Process).</li>
                 <li><strong>Edit Policy:</strong> A fully-scrollable form allowing modifications to all aspects of the policy. This includes Account Information (Account Number, IFSC, Account Holder Name), Policy & Upload Document, and all previously mentioned vehicle details.</li>
+              </ul>
+            </div>
+          </div>
+        </DocSection>
+        {/* =====================================================================
+            WC INSURANCE
+            ===================================================================== */}
+        <DocSection
+          id="wc-insurance"
+          title="WC Insurance"
+          description="The WC (Workmen's Compensation) Insurance section displays policies focused on employer liability. Users can view policy overviews, drill down into employer specifications, premium details, and manage records."
+        >
+          <figure className="mt-6 overflow-hidden rounded-lg border border-border bg-card">
+            <div className="grid gap-4 px-4 pt-4 sm:grid-cols-3">
+              <Image
+                src="/screenshots/wc-insurance-list.jpg"
+                alt="List view of WC Insurance policies in the Commission Report."
+                width={1080}
+                height={2400}
+                className="w-full rounded-lg border border-border"
+                unoptimized
+              />
+              <Image
+                src="/screenshots/wc-insurance-delete.jpg"
+                alt="Delete Confirmation modal for WC Insurance policies."
+                width={1080}
+                height={2400}
+                className="w-full rounded-lg border border-border"
+                unoptimized
+              />
+              <Image
+                src="/screenshots/wc-insurance-details.jpg"
+                alt="Comprehensive details view for a WC Insurance policy."
+                width={1080}
+                height={2400}
+                className="w-full rounded-lg border border-border"
+                unoptimized
+              />
+            </div>
+            <figcaption className="border-t border-border px-4 py-2.5 text-xs text-muted-foreground">
+              Left to right: The WC Insurance list view, the Delete Policy confirmation modal, and the fully-scrollable details view.
+            </figcaption>
+          </figure>
+
+          <div className="mt-8 space-y-8">
+            <div>
+              <DocSubheading>1. List View</DocSubheading>
+              <p className="mt-2 text-muted-foreground">
+                The <strong>WC Insurance</strong> tab filters the report to display workmen&apos;s compensation policies. Each card highlights the provider (e.g., Bajaj GIC) with a purple icon, Client and Policy Holder names, Total Premium, and Commission breakdowns (Main Agent and Sub Agent commissions before and after TDS). A red &apos;Delete&apos; button is available directly on the card.
+              </p>
+            </div>
+
+            <div>
+              <DocSubheading>2. Delete Confirmation Modal</DocSubheading>
+              <p className="mt-2 text-muted-foreground">
+                Tapping the delete button on any WC policy card opens a confirmation modal asking <em>&quot;Are you sure you want to delete this Wc Insurance policy?&quot;</em> to ensure safety against accidental clicks.
+              </p>
+            </div>
+
+            <div>
+              <DocSubheading>3. WC Insurance Policy Details</DocSubheading>
+              <p className="mt-2 text-muted-foreground">
+                Tapping on a WC policy card opens the comprehensive, vertically scrollable details view. This view contains specialized sections tailored for workmen&apos;s compensation:
+              </p>
+              <ul className="mt-4 ml-6 list-disc space-y-2 text-muted-foreground">
+                <li><strong>Header Banner:</strong> A prominent purple banner displaying the provider (e.g., Bajaj GIC), Policy Number, and Sum Insured.</li>
+                <li><strong>Policy Information:</strong> Detailed specs such as Agent, Policy Number, Insurance Type, Number of Employees, Start Date, End Date, Booking Date, and Policy Type (e.g., FRESH).</li>
+                <li><strong>Premium Details:</strong> A breakdown of Premium Amount, Total Premium, and GST. It also includes dropdown sections for <strong>Main Agent Commission</strong> and <strong>Sub Agent Commission</strong> detailing percentages, amounts, and TDS deductions.</li>
+                <li><strong>Payment Management:</strong> Displays the Total Amount, Premium Discount, Amount Received, and Amount Remaining, along with a Payment History table showing payment dates, amounts, methods (e.g., CASH), and actions.</li>
+                <li><strong>Employer Details:</strong> Specialized fields recording the Policy Holder Name, Number of Employees, and Sum Insured.</li>
+                <li><strong>Client & Agent Details:</strong> Contact information for the client and the respective agent(s).</li>
+                <li><strong>Actions:</strong> Fixed bottom buttons allowing users to Add Claim Management (Blue), Edit the policy (Yellow), or Delete the policy (Red).</li>
+              </ul>
+            </div>
+
+            <div>
+              <DocSubheading>4. WC Insurance Actions</DocSubheading>
+              <p className="mt-2 text-muted-foreground">
+                Just like with other insurance types, users can manage their WC
+policies directly from the details view using the fixed action buttons at the bottom.
+              </p>
+
+              <figure className="mt-6 overflow-hidden rounded-lg border border-border bg-card">
+                <div className="grid gap-4 px-4 pt-4 sm:grid-cols-5">
+                  <Image
+                    src="/screenshots/wc-action-delete.jpg"
+                    alt="Delete Insurance confirmation modal displayed over the details view."
+                    width={1080}
+                    height={2400}
+                    className="w-full rounded-lg border border-border"
+                    unoptimized
+                  />
+                  <Image
+                    src="/screenshots/wc-action-edit-1.jpg"
+                    alt="Upper half of the Edit WC Insurance form."
+                    width={1080}
+                    height={2400}
+                    className="w-full rounded-lg border border-border"
+                    unoptimized
+                  />
+                  <Image
+                    src="/screenshots/wc-action-edit-2.jpg"
+                    alt="Lower half of the Edit WC Insurance form."
+                    width={1080}
+                    height={2400}
+                    className="w-full rounded-lg border border-border"
+                    unoptimized
+                  />
+                  <Image
+                    src="/screenshots/wc-action-claim-1.jpg"
+                    alt="Upper half of the Add Claim Management form."
+                    width={1080}
+                    height={2400}
+                    className="w-full rounded-lg border border-border"
+                    unoptimized
+                  />
+                  <Image
+                    src="/screenshots/wc-action-claim-2.jpg"
+                    alt="Lower half of the Add Claim Management form."
+                    width={1080}
+                    height={2400}
+                    className="w-full rounded-lg border border-border"
+                    unoptimized
+                  />
+                </div>
+                <figcaption className="border-t border-border px-4 py-2.5 text-xs text-muted-foreground">
+                  WC Insurance Actions: Delete Confirmation, Edit Policy (Split View), and Add Claim (Split View).
+                </figcaption>
+              </figure>
+
+              <ul className="mt-6 ml-6 list-disc space-y-2 text-muted-foreground">
+                <li><strong>Delete Policy:</strong> Opens a warning modal directly within the details view to confirm deletion.</li>
+                <li><strong>Edit Policy:</strong> Opens a fully-scrollable form allowing modifications to all aspects of the policy including Client details, WC Insurance details, Advance details, Commission details, Nominee & Bank details, and Policy Upload sections.</li>
+                <li><strong>Add Claim Management:</strong> Opens a form for logging WC-related claims. Includes fields like Date of Accident, Claim Number, Approx Claim Amount, Claim Type (e.g. Cashless), Bill Amount, Claim Approve Amount, Status (e.g. Under Process) and Description.</li>
               </ul>
             </div>
           </div>
